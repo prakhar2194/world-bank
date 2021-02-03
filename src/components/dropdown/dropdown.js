@@ -66,7 +66,8 @@ class Dropdown extends React.Component{
                     </label>
                     <select 
                         className="form-control" 
-                        onChange={(e) => this.dropdownSelected(e)}>
+                        onChange={(e) => this.dropdownSelected(e)}
+                        data-testid={this.props.testId}>
                         { !isLoaded ?
                             <option>Loading...</option>:
                             options.map((listItem)=>

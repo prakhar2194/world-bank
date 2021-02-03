@@ -46,21 +46,24 @@ class WorldBank extends React.Component{
                         label="Income Level"
                         api={`http://api.worldbank.org/v2/incomelevel?format=json`}
                         onChange={(selected)=>{this.drodownSelected("incomeLevel", selected)}}
-                        property={incomeLevelProperty}/>
+                        property={incomeLevelProperty}
+                        testId="incomeLevel"/>
                     </div>
                     <div className="col-3">
                     <Dropdown 
                         label="Lending Type"
                         api={`http://api.worldbank.org/v2/lendingType?format=json`}
                         onChange={(selected)=>{this.drodownSelected("lendingType", selected)}}
-                        property={lendingTypeProperty}/>
+                        property={lendingTypeProperty}
+                        testId="lendingType"/>
                     </div>
                     <div className="col-3">
                     <Dropdown 
                         label="Region"
                         api={`http://api.worldbank.org/v2/region?format=json`}
                         onChange={(selected)=>{this.drodownSelected("region", selected)}}
-                        property={regionProperty}/>
+                        property={regionProperty}
+                        testId="region"/>
                     </div>
                 </div>
                 <div className="row">
@@ -69,7 +72,8 @@ class WorldBank extends React.Component{
                         api={`http://api.worldbank.org/v2/country?format=json`} 
                         columns={coutryColumns}
                         stripped={true}
-                        filters={this.state.gridFilter}/>
+                        filters={this.state.gridFilter}
+                        testId="worldBankTable"/>
                     </div>
                 </div>
             </div>

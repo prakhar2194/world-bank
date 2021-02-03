@@ -113,13 +113,13 @@ class Grid extends React.Component{
                         totalRecords= {totalRecords}
                         onClick= {(page)=>this.handlePageClick(page)}/>
                     {isLoaded? 
-                        <table className={"table " + (stripped ? "table-striped" : "")}>
+                        <table data-testid={this.props.testId} className={"table " + (stripped ? "table-striped" : "")}>
                             <thead>
-                            <tr className='row'>
-                                {columns.map((column) => (
-                                <th className='col-2' key={column.prop}>{column.header}</th>
-                                ))}
-                            </tr>
+                                <tr className='row'>
+                                    {columns.map((column) => (
+                                    <th className='col-2' key={column.prop}>{column.header}</th>
+                                    ))}
+                                </tr>
                             </thead>
                             <tbody>
                             {gridData.map((row, i) => (
